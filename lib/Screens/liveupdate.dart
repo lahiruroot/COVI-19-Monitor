@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:dio/dio.dart';
+import 'package:slvaccinations/Screens/vaccin_center.dart';
 
 class Liveupdate extends StatefulWidget {
   @override
@@ -84,7 +85,9 @@ class _LiveupdateState extends State<Liveupdate> {
               leading: Icon(Icons.medical_services),
               title:
                   Text("Vaccination Centers", style: TextStyle(fontSize: 16)),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder:(context) => Vaccin_centers()));
+              },
             ),
             ListTile(
               leading: Icon(Icons.eject_rounded),
